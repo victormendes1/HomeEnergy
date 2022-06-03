@@ -13,6 +13,10 @@
 		57A7E91F284993710053793D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E90D2849936E0053793D /* ContentView.swift */; };
 		57A7E920284993710053793D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A7E90E284993710053793D /* Assets.xcassets */; };
 		57A7E921284993710053793D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A7E90E284993710053793D /* Assets.xcassets */; };
+		57A7E92B28499AE70053793D /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E92A28499AE70053793D /* ItemDetailView.swift */; };
+		57A7E92C28499AE70053793D /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E92A28499AE70053793D /* ItemDetailView.swift */; };
+		57FE8CFC284A230700DE48A1 /* TesteArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE8CFB284A230700DE48A1 /* TesteArea.swift */; };
+		57FE8CFD284A230700DE48A1 /* TesteArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE8CFB284A230700DE48A1 /* TesteArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,8 @@
 		57A7E913284993710053793D /* HomeEnergy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeEnergy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A7E919284993710053793D /* HomeEnergy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeEnergy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A7E91B284993710053793D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		57A7E92A28499AE70053793D /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		57FE8CFB284A230700DE48A1 /* TesteArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 			children = (
 				57A7E90C2849936E0053793D /* HomeEnergyApp.swift */,
 				57A7E90D2849936E0053793D /* ContentView.swift */,
+				57A7E92A28499AE70053793D /* ItemDetailView.swift */,
+				57FE8CFB284A230700DE48A1 /* TesteArea.swift */,
 				57A7E90E284993710053793D /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -176,6 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FE8CFC284A230700DE48A1 /* TesteArea.swift in Sources */,
+				57A7E92B28499AE70053793D /* ItemDetailView.swift in Sources */,
 				57A7E91E284993710053793D /* ContentView.swift in Sources */,
 				57A7E91C284993710053793D /* HomeEnergyApp.swift in Sources */,
 			);
@@ -185,6 +195,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FE8CFD284A230700DE48A1 /* TesteArea.swift in Sources */,
+				57A7E92C28499AE70053793D /* ItemDetailView.swift in Sources */,
 				57A7E91F284993710053793D /* ContentView.swift in Sources */,
 				57A7E91D284993710053793D /* HomeEnergyApp.swift in Sources */,
 			);
