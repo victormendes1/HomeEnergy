@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		575F4BA82853D33500BF3B32 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BA72853D33500BF3B32 /* Double.swift */; };
+		575F4BAB2853D3D000BF3B32 /* Shower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BAA2853D3D000BF3B32 /* Shower.swift */; };
+		575F4BAE2853E92200BF3B32 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BAD2853E92200BF3B32 /* Protocols.swift */; };
+		575F4BB12853F8C900BF3B32 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BB02853F8C900BF3B32 /* Colors.swift */; };
+		575F4BB42853FC3C00BF3B32 /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BB32853FC3C00BF3B32 /* ItemDetailViewModel.swift */; };
 		57A7E91C284993710053793D /* HomeEnergyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E90C2849936E0053793D /* HomeEnergyApp.swift */; };
 		57A7E91D284993710053793D /* HomeEnergyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E90C2849936E0053793D /* HomeEnergyApp.swift */; };
 		57A7E91E284993710053793D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E90D2849936E0053793D /* ContentView.swift */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		575F4BA72853D33500BF3B32 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		575F4BAA2853D3D000BF3B32 /* Shower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shower.swift; sourceTree = "<group>"; };
+		575F4BAD2853E92200BF3B32 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		575F4BB02853F8C900BF3B32 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		575F4BB32853FC3C00BF3B32 /* ItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModel.swift; sourceTree = "<group>"; };
 		57A7E90C2849936E0053793D /* HomeEnergyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEnergyApp.swift; sourceTree = "<group>"; };
 		57A7E90D2849936E0053793D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57A7E90E284993710053793D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +58,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		575F4BA62853D31A00BF3B32 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				575F4BA72853D33500BF3B32 /* Double.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		575F4BA92853D3BA00BF3B32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				575F4BAA2853D3D000BF3B32 /* Shower.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		575F4BAC2853E8CB00BF3B32 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				575F4BAD2853E92200BF3B32 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		575F4BAF2853F8BB00BF3B32 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				575F4BB02853F8C900BF3B32 /* Colors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		575F4BB22853FC1500BF3B32 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				575F4BB32853FC3C00BF3B32 /* ItemDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		57A7E9062849936E0053793D = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +111,14 @@
 			isa = PBXGroup;
 			children = (
 				57A7E90C2849936E0053793D /* HomeEnergyApp.swift */,
+				575F4BAC2853E8CB00BF3B32 /* Protocols */,
+				575F4BA92853D3BA00BF3B32 /* Model */,
 				57A7E90D2849936E0053793D /* ContentView.swift */,
 				57A7E92A28499AE70053793D /* ItemDetailView.swift */,
+				575F4BB22853FC1500BF3B32 /* ViewModel */,
 				57FE8CFB284A230700DE48A1 /* TesteArea.swift */,
+				575F4BAF2853F8BB00BF3B32 /* Helpers */,
+				575F4BA62853D31A00BF3B32 /* Extensions */,
 				57A7E90E284993710053793D /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -102,6 +157,8 @@
 			dependencies = (
 			);
 			name = "HomeEnergy (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "HomeEnergy (iOS)";
 			productReference = 57A7E913284993710053793D /* HomeEnergy.app */;
 			productType = "com.apple.product-type.application";
@@ -131,7 +188,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					57A7E912284993710053793D = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -150,6 +207,8 @@
 				Base,
 			);
 			mainGroup = 57A7E9062849936E0053793D;
+			packageReferences = (
+			);
 			productRefGroup = 57A7E914284993710053793D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,9 +244,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				57FE8CFC284A230700DE48A1 /* TesteArea.swift in Sources */,
+				575F4BB12853F8C900BF3B32 /* Colors.swift in Sources */,
 				57A7E92B28499AE70053793D /* ItemDetailView.swift in Sources */,
+				575F4BAE2853E92200BF3B32 /* Protocols.swift in Sources */,
+				575F4BB42853FC3C00BF3B32 /* ItemDetailViewModel.swift in Sources */,
 				57A7E91E284993710053793D /* ContentView.swift in Sources */,
+				575F4BA82853D33500BF3B32 /* Double.swift in Sources */,
 				57A7E91C284993710053793D /* HomeEnergyApp.swift in Sources */,
+				575F4BAB2853D3D000BF3B32 /* Shower.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +303,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -256,6 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -298,6 +364,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -309,6 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -331,7 +399,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,7 +429,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,9 +451,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = BQD43L5A49;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -411,9 +481,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = BQD43L5A49;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;

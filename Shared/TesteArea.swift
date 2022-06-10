@@ -6,13 +6,22 @@
 //
 
 import SwiftUI
+import Charts
 
 struct TesteArea: View {
     
     var body: some View {
         
-        Text("Teste Area")
-        
+        Chart {
+            BarMark(
+                x: . value("Valor", 150),
+                y: . value("Valor", 100)
+            )
+        }
+       // .chartLegend(.hidden)
+      //  .chartXAxis(.hidden)
+      //  .chartYAxis(.hidden)
+        .frame(width: 100, height: 250)
     }
 }
 
