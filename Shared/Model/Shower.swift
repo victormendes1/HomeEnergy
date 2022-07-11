@@ -18,7 +18,6 @@ struct WeeklyShowerUse: TimeAverage {
 }
 
 
-
 // MARK: Data Local
 extension Shower {
     static let showers: [Shower] = [
@@ -43,10 +42,8 @@ extension Shower {
 }
 
 extension WeeklyShowerUse {
-    static var weeklyShowers: [WeeklyShowerUse] {
-        [
-            WeeklyShowerUse(uses: Shower.showers, week: "Esta Semana"),
-            WeeklyShowerUse(uses: Shower.lastWeekshowers, week: "Última Semana")
-        ]
-    }
+    static var weeklyShowers: [WeeklyShowerUse] = [
+        WeeklyShowerUse(uses: Shower.showers, week: "Esta Semana"),
+        WeeklyShowerUse(uses: Shower.lastWeekshowers, week: "Última Semana")
+    ]
 }

@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57247430287CA95D000715FA /* TypesHomeAppliances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724742F287CA95D000715FA /* TypesHomeAppliances.swift */; };
+		57247431287CA95D000715FA /* TypesHomeAppliances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724742F287CA95D000715FA /* TypesHomeAppliances.swift */; };
+		57247434287CAAE9000715FA /* CurrentlyUsingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247433287CAAE9000715FA /* CurrentlyUsingView.swift */; };
+		57247435287CAAE9000715FA /* CurrentlyUsingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247433287CAAE9000715FA /* CurrentlyUsingView.swift */; };
+		57247437287CAB4E000715FA /* DailyUseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247436287CAB4E000715FA /* DailyUseChartView.swift */; };
+		57247438287CAB4E000715FA /* DailyUseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247436287CAB4E000715FA /* DailyUseChartView.swift */; };
+		5724743B287CABAA000715FA /* WeeklyUsageTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743A287CABAA000715FA /* WeeklyUsageTimeView.swift */; };
+		5724743C287CABAA000715FA /* WeeklyUsageTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743A287CABAA000715FA /* WeeklyUsageTimeView.swift */; };
+		5724743E287CAC12000715FA /* DailyUsageTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743D287CAC12000715FA /* DailyUsageTimeView.swift */; };
+		5724743F287CAC12000715FA /* DailyUsageTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743D287CAC12000715FA /* DailyUsageTimeView.swift */; };
 		575F4BA82853D33500BF3B32 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BA72853D33500BF3B32 /* Double.swift */; };
 		575F4BAB2853D3D000BF3B32 /* Shower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BAA2853D3D000BF3B32 /* Shower.swift */; };
 		575F4BAE2853E92200BF3B32 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BAD2853E92200BF3B32 /* Protocols.swift */; };
 		575F4BB12853F8C900BF3B32 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BB02853F8C900BF3B32 /* Colors.swift */; };
-		575F4BB42853FC3C00BF3B32 /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BB32853FC3C00BF3B32 /* ItemDetailViewModel.swift */; };
 		57A7E91C284993710053793D /* HomeEnergyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E90C2849936E0053793D /* HomeEnergyApp.swift */; };
 		57A7E91D284993710053793D /* HomeEnergyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E90C2849936E0053793D /* HomeEnergyApp.swift */; };
 		57A7E91E284993710053793D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E90D2849936E0053793D /* ContentView.swift */; };
@@ -20,16 +29,21 @@
 		57A7E921284993710053793D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A7E90E284993710053793D /* Assets.xcassets */; };
 		57A7E92B28499AE70053793D /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E92A28499AE70053793D /* ItemDetailView.swift */; };
 		57A7E92C28499AE70053793D /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A7E92A28499AE70053793D /* ItemDetailView.swift */; };
+		57AF356428580ECB003E9301 /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AF356328580ECB003E9301 /* Frequency.swift */; };
 		57FE8CFC284A230700DE48A1 /* TesteArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE8CFB284A230700DE48A1 /* TesteArea.swift */; };
 		57FE8CFD284A230700DE48A1 /* TesteArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE8CFB284A230700DE48A1 /* TesteArea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5724742F287CA95D000715FA /* TypesHomeAppliances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesHomeAppliances.swift; sourceTree = "<group>"; };
+		57247433287CAAE9000715FA /* CurrentlyUsingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentlyUsingView.swift; sourceTree = "<group>"; };
+		57247436287CAB4E000715FA /* DailyUseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUseChartView.swift; sourceTree = "<group>"; };
+		5724743A287CABAA000715FA /* WeeklyUsageTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyUsageTimeView.swift; sourceTree = "<group>"; };
+		5724743D287CAC12000715FA /* DailyUsageTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUsageTimeView.swift; sourceTree = "<group>"; };
 		575F4BA72853D33500BF3B32 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		575F4BAA2853D3D000BF3B32 /* Shower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shower.swift; sourceTree = "<group>"; };
 		575F4BAD2853E92200BF3B32 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		575F4BB02853F8C900BF3B32 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		575F4BB32853FC3C00BF3B32 /* ItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModel.swift; sourceTree = "<group>"; };
 		57A7E90C2849936E0053793D /* HomeEnergyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEnergyApp.swift; sourceTree = "<group>"; };
 		57A7E90D2849936E0053793D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57A7E90E284993710053793D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +51,7 @@
 		57A7E919284993710053793D /* HomeEnergy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeEnergy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A7E91B284993710053793D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		57A7E92A28499AE70053793D /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		57AF356328580ECB003E9301 /* Frequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency.swift; sourceTree = "<group>"; };
 		57FE8CFB284A230700DE48A1 /* TesteArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteArea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +73,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57247432287CAA5B000715FA /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				57A7E92A28499AE70053793D /* ItemDetailView.swift */,
+				57247439287CABA0000715FA /* CardsView */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		57247439287CABA0000715FA /* CardsView */ = {
+			isa = PBXGroup;
+			children = (
+				57247436287CAB4E000715FA /* DailyUseChartView.swift */,
+				57247433287CAAE9000715FA /* CurrentlyUsingView.swift */,
+				5724743D287CAC12000715FA /* DailyUsageTimeView.swift */,
+				5724743A287CABAA000715FA /* WeeklyUsageTimeView.swift */,
+			);
+			path = CardsView;
+			sourceTree = "<group>";
+		};
 		575F4BA62853D31A00BF3B32 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				575F4BB02853F8C900BF3B32 /* Colors.swift */,
+				57AF356328580ECB003E9301 /* Frequency.swift */,
+				5724742F287CA95D000715FA /* TypesHomeAppliances.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -93,7 +130,6 @@
 		575F4BB22853FC1500BF3B32 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				575F4BB32853FC3C00BF3B32 /* ItemDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -113,10 +149,8 @@
 				57A7E90C2849936E0053793D /* HomeEnergyApp.swift */,
 				575F4BAC2853E8CB00BF3B32 /* Protocols */,
 				575F4BA92853D3BA00BF3B32 /* Model */,
-				57A7E90D2849936E0053793D /* ContentView.swift */,
-				57A7E92A28499AE70053793D /* ItemDetailView.swift */,
+				57AF356228580A3E003E9301 /* View */,
 				575F4BB22853FC1500BF3B32 /* ViewModel */,
-				57FE8CFB284A230700DE48A1 /* TesteArea.swift */,
 				575F4BAF2853F8BB00BF3B32 /* Helpers */,
 				575F4BA62853D31A00BF3B32 /* Extensions */,
 				57A7E90E284993710053793D /* Assets.xcassets */,
@@ -139,6 +173,16 @@
 				57A7E91B284993710053793D /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		57AF356228580A3E003E9301 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57A7E90D2849936E0053793D /* ContentView.swift */,
+				57247432287CAA5B000715FA /* DetailView */,
+				57FE8CFB284A230700DE48A1 /* TesteArea.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,15 +287,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57247430287CA95D000715FA /* TypesHomeAppliances.swift in Sources */,
 				57FE8CFC284A230700DE48A1 /* TesteArea.swift in Sources */,
 				575F4BB12853F8C900BF3B32 /* Colors.swift in Sources */,
 				57A7E92B28499AE70053793D /* ItemDetailView.swift in Sources */,
+				5724743B287CABAA000715FA /* WeeklyUsageTimeView.swift in Sources */,
+				5724743E287CAC12000715FA /* DailyUsageTimeView.swift in Sources */,
 				575F4BAE2853E92200BF3B32 /* Protocols.swift in Sources */,
-				575F4BB42853FC3C00BF3B32 /* ItemDetailViewModel.swift in Sources */,
 				57A7E91E284993710053793D /* ContentView.swift in Sources */,
+				57AF356428580ECB003E9301 /* Frequency.swift in Sources */,
 				575F4BA82853D33500BF3B32 /* Double.swift in Sources */,
+				57247437287CAB4E000715FA /* DailyUseChartView.swift in Sources */,
 				57A7E91C284993710053793D /* HomeEnergyApp.swift in Sources */,
 				575F4BAB2853D3D000BF3B32 /* Shower.swift in Sources */,
+				57247434287CAAE9000715FA /* CurrentlyUsingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57247431287CA95D000715FA /* TypesHomeAppliances.swift in Sources */,
 				57FE8CFD284A230700DE48A1 /* TesteArea.swift in Sources */,
+				57247438287CAB4E000715FA /* DailyUseChartView.swift in Sources */,
 				57A7E92C28499AE70053793D /* ItemDetailView.swift in Sources */,
+				5724743C287CABAA000715FA /* WeeklyUsageTimeView.swift in Sources */,
 				57A7E91F284993710053793D /* ContentView.swift in Sources */,
+				57247435287CAAE9000715FA /* CurrentlyUsingView.swift in Sources */,
 				57A7E91D284993710053793D /* HomeEnergyApp.swift in Sources */,
+				5724743F287CAC12000715FA /* DailyUsageTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

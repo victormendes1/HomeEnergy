@@ -10,35 +10,33 @@ import Charts
 
 // MARK: - Main
 struct ItemDetailView: View {
-    var viewModel: ItemDetailViewModel
+    var averageWeeklyUse = WeeklyShowerUse.weeklyShowers.first?.weeklyTimeAverage ?? 0
+    var isActive: Bool = true
     
     var body: some View {
         ZStack {
+           backgroundGray
+             
             ScrollView {
-                viewModel.dailyUseChart()
-                
-                viewModel.averageTimeUseView(time: viewModel.averageWeeklyUse.asInt)
-                
-                viewModel.averageUsageWeek()
+                DailyUseChartView(homeAppliance: .shower)
+                isActive ? CurrentlyUsingView(homeAppliances: .shower) : nil
+                DailyUsageTimeView(homeAppliance: .shower, time: averageWeeklyUse.asInt)
+                WeeklyUsageTimeView(homeAppliance: .shower)
             }
         }
         .navigationTitle("Chuveiro")
         .ignoresSafeArea(edges: .bottom)
         .navigationBarTitleDisplayMode(.inline)
     }
-    
-    init(viewModel: ItemDetailViewModel = ItemDetailViewModel()) {
-        self.viewModel = ItemDetailViewModel()
-    }
+       
 }
-
 
 // MARK: - Preview
 struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ItemDetailView()
-                .environmentObject(ItemDetailViewModel())
+                .preferredColorScheme(.dark)
         }
     }
 }
