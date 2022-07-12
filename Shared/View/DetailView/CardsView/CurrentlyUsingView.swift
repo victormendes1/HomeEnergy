@@ -8,23 +8,28 @@
 import SwiftUI
 
 struct CurrentlyUsingView: View {
+    @Binding var selectedType: TrackingType
     var homeAppliances: TypesHomeAppliances
     
     var body: some View {
         VStack {
             RoundedRectangle(cornerRadius: 8)
                 .foregroundColor(tertiaryGray)
-                .frame(height: 100)
+                .frame(height: selectedType == . time ? 100 : 120)
                 .overlay(
                     VStack {
                         VStack {
                             HStack {
                                 Image(systemName: "hourglass")
-                                    .foregroundColor(homeAppliances.secondaryColor)
+                                    .foregroundColor(selectedType == .time ? homeAppliances.secondaryColor:
+                                                        secondaryOrange
+                                    )
                                 
                                 Text("Atualmente em uso")
                                     .fontWeight(.medium)
-                                    .foregroundColor(homeAppliances.secondaryColor)
+                                    .foregroundColor(selectedType == .time ? homeAppliances.secondaryColor:
+                                                        secondaryOrange
+                                    )
                             }
                             Divider()
                         }
@@ -36,6 +41,11 @@ struct CurrentlyUsingView: View {
                             Text("4min")
                                 .fontWeight(.bold)
                         }
+                        
+                        if selectedType == .energetic {
+                            Text("Consumindo 54 Kwh")
+                        }
+                            
                     }
                         .foregroundColor(.white)
                 )

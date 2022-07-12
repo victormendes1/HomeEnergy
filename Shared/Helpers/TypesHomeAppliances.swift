@@ -47,3 +47,23 @@ extension TypesHomeAppliances {
         }
     }
 }
+
+//extension TypesHomeAppliances {
+//    var trackingType: TrackingType {
+//        switch self.trackingType {
+//        case .time:
+//            break
+//        case .energetic:
+//            break
+//        }
+//    }
+//
+//    private var _trackingType: Color {
+//        switch trackingType {
+//        case .energetic:
+//            return secondaryOrange
+//        case .time:
+//            break
+//        }
+//    }
+//}

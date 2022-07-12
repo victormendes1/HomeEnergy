@@ -9,6 +9,7 @@ import SwiftUI
 import Charts
 
 struct WeeklyUsageTimeView: View {
+    @Binding var selectedType: TrackingType
     var homeAppliance: TypesHomeAppliances
     
     var body: some View {
@@ -19,31 +20,33 @@ struct WeeklyUsageTimeView: View {
                 VStack {
                     HStack {
                         Image(systemName: "clock.fill")
-                            .foregroundColor(homeAppliance.secondaryColor)
+                            .foregroundColor(selectedType == .time ? homeAppliance.secondaryColor:
+                                                secondaryOrange)
                         
                         Text("Tempo médio de uso por semana")
                             .fontWeight(.medium)
-                            .foregroundColor(homeAppliance.secondaryColor)
+                            .foregroundColor(selectedType == .time ? homeAppliance.secondaryColor:
+                                                secondaryOrange)
                     }
                     Divider()
                 }
                     .offset(y: -90)
             )
             .overlay(
-                Chart(WeeklyShowerUse.weeklyShowers) { shower in
-                    if shower.weeklyTimeAverage < 8 {
+                Chart(Showers.consumptionWeekly) { shower in
+                    if shower.consumerMedia < 8 {
                         
                         BarMark(
-                            x: .value("Time", shower.weeklyTimeAverage),
-                            y: .value("Name", shower.week),
+                            x: .value("Time", shower.consumerMedia),
+                            y: .value("Name", shower.date),
                             width: 35
                         )
                         .clipShape(RoundedRectangle(cornerRadius: 7))
                         .foregroundStyle(secondaryGray)
                     } else {
                         BarMark(
-                            x: .value("Time", shower.weeklyTimeAverage),
-                            y: .value("Name", shower.week),
+                            x: .value("Time", shower.consumerMedia),
+                            y: .value("Name", shower.date),
                             width: 35
                         )
                         .clipShape(RoundedRectangle(cornerRadius: 7))
@@ -59,11 +62,11 @@ struct WeeklyUsageTimeView: View {
                     .offset(y: 0)
                     .overlay(
                         VStack(alignment: .leading, spacing: 21) {
-                            ForEach(WeeklyShowerUse.weeklyShowers) { shower in
+                            ForEach(Showers.consumptionWeekly) { shower in
                                 VStack(alignment: .leading, spacing: 8) {
                                     
                                     HStack(alignment: .lastTextBaseline , spacing: 1) {
-                                        Text("\(shower.weeklyTimeAverage.asInt)")
+                                        Text("\(shower.consumerMedia.asInt)")
                                             .font(.title)
                                             .fontWeight(.semibold)
                                         
@@ -73,7 +76,7 @@ struct WeeklyUsageTimeView: View {
                                             .opacity(0.5)
                                     }
                                     
-                                    Text(shower.week)
+                                    Text(shower.date)
                                         .font(.subheadline)
                                         .fontWeight(.semibold)
                                 }

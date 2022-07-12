@@ -9,6 +9,7 @@ import SwiftUI
 import Charts
 
 struct DailyUseChartView: View {
+    @Binding var selectedType: TrackingType
     var homeAppliance: TypesHomeAppliances
     
     var body: some View {
@@ -18,10 +19,10 @@ struct DailyUseChartView: View {
             .overlay (
                 Chart(Shower.showers) { element in
                     BarMark(
-                        x: .value("Day", element.day),
-                        y: .value("Time", element.time)
+                        x: .value("Day", element.date),
+                        y: .value("Time", selectedType == .time ? element.consumption.time : element.consumption.energetic)
                     )
-                    .foregroundStyle(Color(homeAppliance.systemColor).gradient)
+                    .foregroundStyle(Color(selectedType == .time ? homeAppliance.systemColor : .systemOrange).gradient)
                 }
                     .backgroundStyle(Color.black)
                     .padding()

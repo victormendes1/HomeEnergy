@@ -8,27 +8,25 @@
 import UIKit
 
 // MARK: - Usage Time
-protocol UsageTime: Identifiable {
-    var day: String  { get set }
-    var time: Int { get set }
+protocol Traceable: Identifiable {
+    var date: String  { get set }
+    var consumption: Consumption { get set }
 }
 
-extension UsageTime {
+extension Traceable {
     var id: UUID { UUID() }
 }
 
 // MARK: - Time Average
-protocol TimeAverage: Identifiable {
-    associatedtype Time: UsageTime
+protocol Consumptions: Identifiable {
+    associatedtype Consumption: Traceable
     
-    var week: String { get }
-    var uses: [Time] { get set }
+    var consumptions: [Consumption] { get set }
 }
 
-extension TimeAverage {
+extension Consumptions {
     var id: UUID { UUID() }
-    
-    var weeklyTimeAverage: Double {
-        Double(uses.map { $0.time }.reduce(0, +) / uses.count)
+    var consumerMedia: Double {
+        Double(consumptions.compactMap { $0.consumption.time }.reduce(0, +) / consumptions.count)
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DailyUsageTimeView: View {
+    @Binding var selectedType: TrackingType
+    
     var homeAppliance: TypesHomeAppliances
     var time: Int
     
@@ -25,7 +27,8 @@ struct DailyUsageTimeView: View {
                                 Text("Tempo médio de uso por dia")
                                     .fontWeight(.semibold)
                             }
-                            .foregroundColor(homeAppliance.secondaryColor)
+                            .foregroundColor(selectedType == .time ? homeAppliance.secondaryColor:
+                                                secondaryOrange)
                             
                             Divider()
                         }
