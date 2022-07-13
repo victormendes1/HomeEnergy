@@ -8,6 +8,6 @@
 import SwiftUI
 
 enum TrackingType: String, CaseIterable {
-    case time = "Time"
-    case energetic = "Energetic"
+    case time = "Tempo"
+    case energetic = "Elétrico"
 }

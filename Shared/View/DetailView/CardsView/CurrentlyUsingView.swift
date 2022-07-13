@@ -43,9 +43,13 @@ struct CurrentlyUsingView: View {
                         }
                         
                         if selectedType == .energetic {
-                            Text("Consumindo 54 Kwh")
+                            HStack (spacing: 5){
+                                Text("Consumindo")
+                                
+                                Text("54 Kwh")
+                                    .fontWeight(.medium)
+                            }
                         }
-                            
                     }
                         .foregroundColor(.white)
                 )

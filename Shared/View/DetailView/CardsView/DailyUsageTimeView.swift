@@ -22,10 +22,16 @@ struct DailyUsageTimeView: View {
                     VStack {
                         VStack {
                             HStack {
-                                Image(systemName: "clock.fill")
+                                Image(systemName: selectedType == .time ? "clock.fill" : "bolt.fill")
                                 
-                                Text("Tempo médio de uso por dia")
-                                    .fontWeight(.semibold)
+                                if selectedType == .time {
+                                    Text("Tempo médio de uso por dia")
+                                        .fontWeight(.semibold)
+                                } else {
+                                    Text("Consumo médio de uso por dia")
+                                        .fontWeight(.semibold)
+                                }
+                                
                             }
                             .foregroundColor(selectedType == .time ? homeAppliance.secondaryColor:
                                                 secondaryOrange)
@@ -33,8 +39,11 @@ struct DailyUsageTimeView: View {
                             Divider()
                         }
                         .offset(y: -8)
-                        
-                        Text("\(time) minutos")
+                        if selectedType == .time {
+                            Text("\(time) minutos")
+                        } else {
+                            Text("\(time) minutos / 54Kwh")
+                        }
                     }
                 )
         }

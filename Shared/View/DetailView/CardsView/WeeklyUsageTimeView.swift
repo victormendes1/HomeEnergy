@@ -19,14 +19,19 @@ struct WeeklyUsageTimeView: View {
             .overlay(
                 VStack {
                     HStack {
-                        Image(systemName: "clock.fill")
+                        Image(systemName: selectedType == .time ? "clock.fill" : "bolt.fill")
                             .foregroundColor(selectedType == .time ? homeAppliance.secondaryColor:
                                                 secondaryOrange)
                         
-                        Text("Tempo médio de uso por semana")
-                            .fontWeight(.medium)
-                            .foregroundColor(selectedType == .time ? homeAppliance.secondaryColor:
-                                                secondaryOrange)
+                        if selectedType == .time {
+                            Text("Tempo médio de uso por semana")
+                                .fontWeight(.medium)
+                                .foregroundColor(homeAppliance.secondaryColor)
+                        } else {
+                            Text("Consumo médio de uso por semana")
+                                .fontWeight(.medium)
+                                .foregroundColor(secondaryOrange)
+                        }
                     }
                     Divider()
                 }
@@ -66,16 +71,26 @@ struct WeeklyUsageTimeView: View {
                                 VStack(alignment: .leading, spacing: 8) {
                                     
                                     HStack(alignment: .lastTextBaseline , spacing: 1) {
-                                        Text("\(shower.consumerMedia.asInt)")
-                                            .font(.title)
-                                            .fontWeight(.semibold)
-                                        
-                                        Text("min/dia")
-                                            .font(.subheadline)
-                                            .fontWeight(.semibold)
-                                            .opacity(0.5)
+                                        if selectedType == .time {
+                                            Text("\(shower.consumerMedia.asInt)")
+                                                .font(.title)
+                                                .fontWeight(.semibold)
+                                            
+                                            Text("min/dia")
+                                                .font(.subheadline)
+                                                .fontWeight(.semibold)
+                                                .opacity(0.5)
+                                        } else {
+                                            Text("54")
+                                                .font(.title)
+                                                .fontWeight(.semibold)
+                                            
+                                            Text("Kwh/dia")
+                                                .font(.subheadline)
+                                                .fontWeight(.semibold)
+                                                .opacity(0.5)
+                                        }
                                     }
-                                    
                                     Text(shower.date)
                                         .font(.subheadline)
                                         .fontWeight(.semibold)
