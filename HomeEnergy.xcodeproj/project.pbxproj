@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57247430287CA95D000715FA /* TypesHomeAppliances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724742F287CA95D000715FA /* TypesHomeAppliances.swift */; };
-		57247431287CA95D000715FA /* TypesHomeAppliances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724742F287CA95D000715FA /* TypesHomeAppliances.swift */; };
+		57247430287CA95D000715FA /* HomeAppliancesTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724742F287CA95D000715FA /* HomeAppliancesTypes.swift */; };
+		57247431287CA95D000715FA /* HomeAppliancesTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724742F287CA95D000715FA /* HomeAppliancesTypes.swift */; };
 		57247434287CAAE9000715FA /* CurrentlyUsingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247433287CAAE9000715FA /* CurrentlyUsingView.swift */; };
 		57247435287CAAE9000715FA /* CurrentlyUsingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247433287CAAE9000715FA /* CurrentlyUsingView.swift */; };
 		57247437287CAB4E000715FA /* DailyUseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247436287CAB4E000715FA /* DailyUseChartView.swift */; };
 		57247438287CAB4E000715FA /* DailyUseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247436287CAB4E000715FA /* DailyUseChartView.swift */; };
 		5724743B287CABAA000715FA /* WeeklyUsageTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743A287CABAA000715FA /* WeeklyUsageTimeView.swift */; };
 		5724743C287CABAA000715FA /* WeeklyUsageTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743A287CABAA000715FA /* WeeklyUsageTimeView.swift */; };
-		5724743E287CAC12000715FA /* DailyUsageTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743D287CAC12000715FA /* DailyUsageTimeView.swift */; };
-		5724743F287CAC12000715FA /* DailyUsageTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743D287CAC12000715FA /* DailyUsageTimeView.swift */; };
+		5724743E287CAC12000715FA /* DailyConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743D287CAC12000715FA /* DailyConsumptionView.swift */; };
+		5724743F287CAC12000715FA /* DailyConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5724743D287CAC12000715FA /* DailyConsumptionView.swift */; };
 		57247442287CB580000715FA /* TrackingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247441287CB580000715FA /* TrackingType.swift */; };
 		57247443287CB580000715FA /* TrackingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247441287CB580000715FA /* TrackingType.swift */; };
 		57247445287D041F000715FA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247444287D041F000715FA /* Date.swift */; };
 		57247446287D041F000715FA /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247444287D041F000715FA /* Date.swift */; };
-		57247448287D0774000715FA /* ModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247447287D0774000715FA /* ModelBase.swift */; };
-		57247449287D0774000715FA /* ModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57247447287D0774000715FA /* ModelBase.swift */; };
+		5745D9C22880983A00A7EA14 /* ConsumptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5745D9C12880983A00A7EA14 /* ConsumptionType.swift */; };
+		5745D9C32880983A00A7EA14 /* ConsumptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5745D9C12880983A00A7EA14 /* ConsumptionType.swift */; };
+		5745D9C528809BE900A7EA14 /* Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5745D9C428809BE900A7EA14 /* Consumption.swift */; };
+		5745D9C628809BE900A7EA14 /* Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5745D9C428809BE900A7EA14 /* Consumption.swift */; };
 		575F4BA82853D33500BF3B32 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BA72853D33500BF3B32 /* Double.swift */; };
 		575F4BAB2853D3D000BF3B32 /* Shower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BAA2853D3D000BF3B32 /* Shower.swift */; };
 		575F4BAE2853E92200BF3B32 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F4BAD2853E92200BF3B32 /* Protocols.swift */; };
@@ -41,14 +43,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5724742F287CA95D000715FA /* TypesHomeAppliances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesHomeAppliances.swift; sourceTree = "<group>"; };
+		5724742F287CA95D000715FA /* HomeAppliancesTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAppliancesTypes.swift; sourceTree = "<group>"; };
 		57247433287CAAE9000715FA /* CurrentlyUsingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentlyUsingView.swift; sourceTree = "<group>"; };
 		57247436287CAB4E000715FA /* DailyUseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUseChartView.swift; sourceTree = "<group>"; };
 		5724743A287CABAA000715FA /* WeeklyUsageTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyUsageTimeView.swift; sourceTree = "<group>"; };
-		5724743D287CAC12000715FA /* DailyUsageTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUsageTimeView.swift; sourceTree = "<group>"; };
+		5724743D287CAC12000715FA /* DailyConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyConsumptionView.swift; sourceTree = "<group>"; };
 		57247441287CB580000715FA /* TrackingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingType.swift; sourceTree = "<group>"; };
 		57247444287D041F000715FA /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		57247447287D0774000715FA /* ModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBase.swift; sourceTree = "<group>"; };
+		5745D9C12880983A00A7EA14 /* ConsumptionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionType.swift; sourceTree = "<group>"; };
+		5745D9C428809BE900A7EA14 /* Consumption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumption.swift; sourceTree = "<group>"; };
 		575F4BA72853D33500BF3B32 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		575F4BAA2853D3D000BF3B32 /* Shower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shower.swift; sourceTree = "<group>"; };
 		575F4BAD2853E92200BF3B32 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -96,7 +99,7 @@
 			children = (
 				57247436287CAB4E000715FA /* DailyUseChartView.swift */,
 				57247433287CAAE9000715FA /* CurrentlyUsingView.swift */,
-				5724743D287CAC12000715FA /* DailyUsageTimeView.swift */,
+				5724743D287CAC12000715FA /* DailyConsumptionView.swift */,
 				5724743A287CABAA000715FA /* WeeklyUsageTimeView.swift */,
 			);
 			path = CardsView;
@@ -115,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				575F4BAA2853D3D000BF3B32 /* Shower.swift */,
+				5745D9C428809BE900A7EA14 /* Consumption.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,9 +136,9 @@
 			children = (
 				575F4BB02853F8C900BF3B32 /* Colors.swift */,
 				57AF356328580ECB003E9301 /* Frequency.swift */,
-				5724742F287CA95D000715FA /* TypesHomeAppliances.swift */,
+				5724742F287CA95D000715FA /* HomeAppliancesTypes.swift */,
+				5745D9C12880983A00A7EA14 /* ConsumptionType.swift */,
 				57247441287CB580000715FA /* TrackingType.swift */,
-				57247447287D0774000715FA /* ModelBase.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -299,15 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57247430287CA95D000715FA /* TypesHomeAppliances.swift in Sources */,
+				57247430287CA95D000715FA /* HomeAppliancesTypes.swift in Sources */,
 				57FE8CFC284A230700DE48A1 /* TesteArea.swift in Sources */,
 				575F4BB12853F8C900BF3B32 /* Colors.swift in Sources */,
 				57247445287D041F000715FA /* Date.swift in Sources */,
 				57A7E92B28499AE70053793D /* ItemDetailView.swift in Sources */,
 				5724743B287CABAA000715FA /* WeeklyUsageTimeView.swift in Sources */,
-				5724743E287CAC12000715FA /* DailyUsageTimeView.swift in Sources */,
+				5724743E287CAC12000715FA /* DailyConsumptionView.swift in Sources */,
+				5745D9C22880983A00A7EA14 /* ConsumptionType.swift in Sources */,
 				575F4BAE2853E92200BF3B32 /* Protocols.swift in Sources */,
-				57247448287D0774000715FA /* ModelBase.swift in Sources */,
 				57A7E91E284993710053793D /* ContentView.swift in Sources */,
 				57AF356428580ECB003E9301 /* Frequency.swift in Sources */,
 				575F4BA82853D33500BF3B32 /* Double.swift in Sources */,
@@ -315,6 +319,7 @@
 				57A7E91C284993710053793D /* HomeEnergyApp.swift in Sources */,
 				57247442287CB580000715FA /* TrackingType.swift in Sources */,
 				575F4BAB2853D3D000BF3B32 /* Shower.swift in Sources */,
+				5745D9C528809BE900A7EA14 /* Consumption.swift in Sources */,
 				57247434287CAAE9000715FA /* CurrentlyUsingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,8 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57247449287D0774000715FA /* ModelBase.swift in Sources */,
-				57247431287CA95D000715FA /* TypesHomeAppliances.swift in Sources */,
+				57247431287CA95D000715FA /* HomeAppliancesTypes.swift in Sources */,
 				57FE8CFD284A230700DE48A1 /* TesteArea.swift in Sources */,
 				57247438287CAB4E000715FA /* DailyUseChartView.swift in Sources */,
 				57A7E92C28499AE70053793D /* ItemDetailView.swift in Sources */,
@@ -332,9 +336,11 @@
 				57A7E91F284993710053793D /* ContentView.swift in Sources */,
 				57247435287CAAE9000715FA /* CurrentlyUsingView.swift in Sources */,
 				57247443287CB580000715FA /* TrackingType.swift in Sources */,
+				5745D9C628809BE900A7EA14 /* Consumption.swift in Sources */,
 				57247446287D041F000715FA /* Date.swift in Sources */,
+				5745D9C32880983A00A7EA14 /* ConsumptionType.swift in Sources */,
 				57A7E91D284993710053793D /* HomeEnergyApp.swift in Sources */,
-				5724743F287CAC12000715FA /* DailyUsageTimeView.swift in Sources */,
+				5724743F287CAC12000715FA /* DailyConsumptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

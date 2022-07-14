@@ -23,23 +23,23 @@ struct Showers: Consumptions {
 // MARK: Data Local
 extension Shower {
     static let showers: [Shower] = [
-        .init(date: "Seg", consumption: .init(time: 7, energetic: 100)),
-        .init(date: "Ter", consumption: .init(time: 4, energetic: 90)),
-        .init(date: "Qua", consumption: .init(time: 5, energetic: 95)),
-        .init(date: "Qui", consumption: .init(time: 6, energetic: 97)),
-        .init(date: "Sex", consumption: .init(time: 10, energetic: 120)),
-        .init(date: "Sáb", consumption: .init(time: 7, energetic: 100)),
-        .init(date: "Dom", consumption: .init(time: 8, energetic: 110))
+        .init(date: "Seg", consumption: .init(time: 7, energetic: 80)),
+        .init(date: "Ter", consumption: .init(time: 4, energetic: 55)),
+        .init(date: "Qua", consumption: .init(time: 5, energetic: 65)),
+        .init(date: "Qui", consumption: .init(time: 6, energetic: 75)),
+        .init(date: "Sex", consumption: .init(time: 10, energetic: 110)),
+        .init(date: "Sáb", consumption: .init(time: 7, energetic: 80)),
+        .init(date: "Dom", consumption: .init(time: 8, energetic: 90))
     ]
     
     static let lastWeekshowers: [Shower] = [
-        .init(date: "Seg", consumption: .init(time: 5, energetic: 95)),
-        .init(date: "Ter", consumption: .init(time: 7, energetic: 100)),
-        .init(date: "Qua", consumption: .init(time: 4, energetic: 90)),
-        .init(date: "Qui", consumption: .init(time: 6, energetic: 97)),
-        .init(date: "Sex", consumption: .init(time: 8, energetic: 110)),
-        .init(date: "Sáb", consumption: .init(time: 8, energetic: 110)),
-        .init(date: "Dom", consumption: .init(time: 5, energetic: 95))
+        .init(date: "Seg", consumption: .init(time: 9, energetic: 100)),
+        .init(date: "Ter", consumption: .init(time: 8, energetic: 70)),
+        .init(date: "Qua", consumption: .init(time: 7, energetic: 60)),
+        .init(date: "Qui", consumption: .init(time: 10, energetic: 110)),
+        .init(date: "Sex", consumption: .init(time: 8, energetic: 90)),
+        .init(date: "Sáb", consumption: .init(time: 8, energetic: 90)),
+        .init(date: "Dom", consumption: .init(time: 14, energetic: 120))
     ]
 }
 

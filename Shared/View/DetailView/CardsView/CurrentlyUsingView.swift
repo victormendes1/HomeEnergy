@@ -8,52 +8,57 @@
 import SwiftUI
 
 struct CurrentlyUsingView: View {
-    @Binding var selectedType: TrackingType
-    var homeAppliances: TypesHomeAppliances
+    @Binding var consumption: TrackingType
+    var homeAppliances: HomeAppliancesTypes
     
     var body: some View {
-        VStack {
+        ZStack {
             RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(tertiaryGray)
-                .frame(height: selectedType == . time ? 100 : 120)
-                .overlay(
-                    VStack {
-                        VStack {
-                            HStack {
-                                Image(systemName: "hourglass")
-                                    .foregroundColor(selectedType == .time ? homeAppliances.secondaryColor:
-                                                        secondaryOrange
-                                    )
-                                
-                                Text("Atualmente em uso")
-                                    .fontWeight(.medium)
-                                    .foregroundColor(selectedType == .time ? homeAppliances.secondaryColor:
-                                                        secondaryOrange
-                                    )
-                            }
-                            Divider()
-                        }
-                        .offset(y: -10)
-                        
-                        HStack(spacing: 5) {
-                            Text("Este \(homeAppliances.name.lowercased()) esta em uso há")
-                            
-                            Text("4min")
-                                .fontWeight(.bold)
-                        }
-                        
-                        if selectedType == .energetic {
-                            HStack (spacing: 5){
-                                Text("Consumindo")
-                                
-                                Text("54 Kwh")
-                                    .fontWeight(.medium)
-                            }
-                        }
+            
+            VStack(spacing: .zero) {
+                HStack {
+                    Image(systemName: "hourglass")
+                    Text("Atualmente em uso")
+                        .shadow(radius: 2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(consumption == .time ? homeAppliances.secondaryColor : secondaryOrange)
+                }
+                .padding(.vertical, 8)
+                .foregroundColor(consumption == .time ? homeAppliances.secondaryColor : secondaryOrange)
+                
+                Divider()
+                
+                HStack(spacing: 5) {
+                    Text("Este \(homeAppliances.name.lowercased()) esta em uso há")
+                    Text("4 minutos")
+                        .fontWeight(.semibold)
+                }
+                .padding(.top, 15)
+                .padding(.bottom, consumption == .time ? 15 : 8)
+                .foregroundColor(.white)
+                
+                if consumption == .energetic {
+                    HStack (spacing: 5) {
+                        Text("Consumindo")
+                        Text("54 Kwh")
+                            .fontWeight(.semibold)
                     }
-                        .foregroundColor(.white)
-                )
-                .padding(10)
+                    .padding(.bottom, 15)
+                    .foregroundColor(.white)
+                }
+            }
+        }
+        .shadow(radius: 3)
+        .foregroundColor(tertiaryGray)
+        .padding(10)
+    }
+}
+
+struct CurrentlyUsingView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            CurrentlyUsingView(consumption: .constant(.time), homeAppliances: .shower)
+                .preferredColorScheme(.dark)
         }
     }
 }

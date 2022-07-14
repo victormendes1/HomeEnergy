@@ -9,24 +9,23 @@ import SwiftUI
 import Charts
 
 struct DailyUseChartView: View {
-    @Binding var selectedType: TrackingType
-    var homeAppliance: TypesHomeAppliances
+    @Binding var consumption: TrackingType
+    var homeAppliance: HomeAppliancesTypes
     
     var body: some View {
-        RoundedRectangle(cornerRadius: 0)
-            .frame(height: 250)
+        Rectangle()
+            .frame(height: 350)
             .foregroundColor(.black)
             .overlay (
                 Chart(Shower.showers) { element in
                     BarMark(
                         x: .value("Day", element.date),
-                        y: .value("Time", selectedType == .time ? element.consumption.time : element.consumption.energetic)
+                        y: .value("Time", consumption == .time ? element.consumption.time : element.consumption.energetic)
                     )
-                    .foregroundStyle(Color(selectedType == .time ? homeAppliance.systemColor : .systemOrange).gradient)
+                    .foregroundStyle(Color(consumption == .time ? homeAppliance.systemColor : .systemOrange).gradient)
                 }
-                    .backgroundStyle(Color.black)
                     .padding()
-                    .frame(height: 250)
+                    .frame(height: 350)
             )
     }
 }

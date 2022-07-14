@@ -1,5 +1,5 @@
 //
-//  TypesHomeAppliances.swift
+//  HomeAppliancesTypes.swift
 //  HomeEnergy
 //
 //  Created by Victor Mendes on 11/07/22.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-enum TypesHomeAppliances {
+enum HomeAppliancesTypes {
     case shower
 }
 
-extension TypesHomeAppliances {
+extension HomeAppliancesTypes {
     var name: String {
         switch self {
         case .shower:

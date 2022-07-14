@@ -26,7 +26,12 @@ protocol Consumptions: Identifiable {
 
 extension Consumptions {
     var id: UUID { UUID() }
-    var consumerMedia: Double {
+    
+    var timeMedia: Double {
         Double(consumptions.compactMap { $0.consumption.time }.reduce(0, +) / consumptions.count)
+    }
+    
+    var energeticMedia: Double {
+        Double(consumptions.compactMap { $0.consumption.energetic }.reduce(0, +) / consumptions.count)
     }
 }

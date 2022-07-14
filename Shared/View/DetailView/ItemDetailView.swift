@@ -10,23 +10,24 @@ import Charts
 
 // MARK: - Main
 struct ItemDetailView: View {
-    @State private var selectedType: TrackingType = .time
+    @State private var type: TrackingType = .time
     
-    var averageConsumption = Showers.consumptionWeekly.first!.consumerMedia
+    var averageConsumptionTime = Showers.consumptionWeekly.first!.timeMedia
+    var averageConsumptionEnergitc = Showers.consumptionWeekly.first!.energeticMedia
     var isActive: Bool = true
     
     var body: some View {
         VStack {
-            PickerSelectType(selectedType: $selectedType.animation(.easeInOut))
+            ConsumptionType(type: $type.animation(.default.speed(1.5)))
             
             ZStack {
                 backgroundGray
                 
                 ScrollView {
-                    DailyUseChartView(selectedType: $selectedType, homeAppliance: .shower)
-                    isActive ? CurrentlyUsingView(selectedType: $selectedType, homeAppliances: .shower) : nil
-                    DailyUsageTimeView(selectedType: $selectedType, homeAppliance: .shower, time: averageConsumption.asInt)
-                    WeeklyUsageTimeView(selectedType: $selectedType, homeAppliance: .shower)
+                    DailyUseChartView(consumption: $type, homeAppliance: .shower)
+                    isActive ? CurrentlyUsingView(consumption: $type, homeAppliances: .shower) : nil
+                    DailyConsumptionView(consumption: $type, homeAppliance: .shower, time: averageConsumptionTime.asInt, energetic: averageConsumptionEnergitc.asInt)
+                    WeeklyUsageTimeView(consumption: $type, homeAppliance: .shower)
                 }
             }
         }
@@ -36,17 +37,6 @@ struct ItemDetailView: View {
     }
 }
 
-struct PickerSelectType: View {
-    @Binding var selectedType: TrackingType
-    var body: some View {
-        Picker("SelectType", selection: $selectedType) {
-            ForEach(TrackingType.allCases, id: \.self) {
-                Text($0.rawValue)
-            }
-        }
-        .pickerStyle(.segmented)
-    }
-}
 // MARK: - Preview
 struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {

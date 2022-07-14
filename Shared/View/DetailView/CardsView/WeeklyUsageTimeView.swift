@@ -9,101 +9,118 @@ import SwiftUI
 import Charts
 
 struct WeeklyUsageTimeView: View {
-    @Binding var selectedType: TrackingType
-    var homeAppliance: TypesHomeAppliances
+    @Binding var consumption: TrackingType
+    var homeAppliance: HomeAppliancesTypes
+    
+    private(set) var time: [Color] = [
+        tertiaryBlue,
+        secondaryBlue
+    ]
+    
+    private(set) var energetic: [Color] = [
+        tertiaryOrange,
+        secondaryOrange
+    ]
     
     var body: some View {
-        RoundedRectangle(cornerRadius: 8)
-            .foregroundColor(tertiaryGray)
-            .frame(height: 240)
-            .overlay(
-                VStack {
-                    HStack {
-                        Image(systemName: selectedType == .time ? "clock.fill" : "bolt.fill")
-                            .foregroundColor(selectedType == .time ? homeAppliance.secondaryColor:
-                                                secondaryOrange)
-                        
-                        if selectedType == .time {
-                            Text("Tempo médio de uso por semana")
-                                .fontWeight(.medium)
-                                .foregroundColor(homeAppliance.secondaryColor)
+        ZStack {
+            RoundedRectangle(cornerRadius: 8)
+            
+            VStack(spacing: .zero) {
+                HStack {
+                    Image(systemName: consumption == .time ? "clock.fill" : "bolt.fill")
+                    Text(consumption == .time ? "Tempo médio de uso por semana" : "Consumo médio de uso por semana")
+                        .shadow(radius: 2)
+                        .fontWeight(.semibold)
+                }
+                .padding(.vertical, 10)
+                .foregroundColor(consumption == .time ? homeAppliance.secondaryColor : secondaryOrange)
+                
+                Divider()
+                
+                // MARK: Chart
+                ZStack(alignment: .leading) {
+                    Chart(Showers.consumptionWeekly) { item in
+                        // TODO: Alterar a forma de destinguir os dados
+                        if item.date == "Esta Semana" {
+                            BarMark(
+                                x: .value("Time", consumption == .time ? item.timeMedia : item.energeticMedia),
+                                y: .value("Date", item.date),
+                                width: 35
+                            )
+                            .clipShape(RoundedRectangle(cornerRadius: 7))
+                            
+                            .foregroundStyle(.linearGradient(
+                                colors: consumption == .time ? time : energetic,
+                                startPoint: .leading,
+                                endPoint: .trailing))
+                            
                         } else {
-                            Text("Consumo médio de uso por semana")
-                                .fontWeight(.medium)
-                                .foregroundColor(secondaryOrange)
+                            BarMark(
+                                x: .value("Time", consumption == .time ? item.timeMedia : item.energeticMedia),
+                                y: .value("Date", item.date),
+                                width: 35
+                            )
+                            .clipShape(RoundedRectangle(cornerRadius: 7))
+                            .foregroundStyle(secondaryGray)
                         }
                     }
-                    Divider()
-                }
-                    .offset(y: -90)
-            )
-            .overlay(
-                Chart(Showers.consumptionWeekly) { shower in
-                    if shower.consumerMedia < 8 {
-                        
-                        BarMark(
-                            x: .value("Time", shower.consumerMedia),
-                            y: .value("Name", shower.date),
-                            width: 35
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 7))
-                        .foregroundStyle(secondaryGray)
-                    } else {
-                        BarMark(
-                            x: .value("Time", shower.consumerMedia),
-                            y: .value("Name", shower.date),
-                            width: 35
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 7))
-                        .foregroundStyle(
-                            .linearGradient(colors: [homeAppliance.tertiaryColor,
-                                                     homeAppliance.color,
-                                                     homeAppliance.secondaryColor],
-                                            startPoint: .bottomLeading,
-                                            endPoint: .topTrailing))
-                    }
-                }
-                    .frame(height: 160)
-                    .offset(y: 0)
-                    .overlay(
-                        VStack(alignment: .leading, spacing: 21) {
-                            ForEach(Showers.consumptionWeekly) { shower in
-                                VStack(alignment: .leading, spacing: 8) {
-                                    
-                                    HStack(alignment: .lastTextBaseline , spacing: 1) {
-                                        if selectedType == .time {
-                                            Text("\(shower.consumerMedia.asInt)")
-                                                .font(.title)
-                                                .fontWeight(.semibold)
-                                            
-                                            Text("min/dia")
-                                                .font(.subheadline)
-                                                .fontWeight(.semibold)
-                                                .opacity(0.5)
-                                        } else {
-                                            Text("54")
-                                                .font(.title)
-                                                .fontWeight(.semibold)
-                                            
-                                            Text("Kwh/dia")
-                                                .font(.subheadline)
-                                                .fontWeight(.semibold)
-                                                .opacity(0.5)
-                                        }
-                                    }
-                                    Text(shower.date)
-                                        .font(.subheadline)
-                                        .fontWeight(.semibold)
-                                }
-                            }
-                        }
-                            .position(x: 60, y: 58)
-                    )
                     .chartXAxis(.hidden)
                     .chartYAxis(.hidden)
-                    .frame(width: UIScreen.main.bounds.width-40, height: 180)
-                    .position(x: 185, y: 150)
-            )
-            .padding(10)
+                    .foregroundColor(.white)
+                    .frame(height: 165)
+                    .padding(.horizontal, 10)
+                    .padding(.top, 23)
+                    
+                    // MARK: Chart Legends
+                    VStack(alignment: .leading, spacing: 22) {
+                        ForEach(Showers.consumptionWeekly) { shower in
+                            VStack(alignment: .leading, spacing: 9) {
+                                
+                                HStack(alignment: .lastTextBaseline , spacing: 2) {
+                                    if consumption == .time {
+                                        Text("\(shower.timeMedia.asInt)")
+                                            .font(.title)
+                                            .fontWeight(.semibold)
+                                        
+                                        Text("min/dia")
+                                            .font(.subheadline)
+                                            .fontWeight(.semibold)
+                                            .opacity(0.5)
+                                    } else {
+                                        Text("\(shower.energeticMedia.asInt)")
+                                            .font(.title)
+                                            .fontWeight(.semibold)
+                                        
+                                        Text("kWh/dia")
+                                            .font(.subheadline)
+                                            .fontWeight(.semibold)
+                                            .opacity(0.5)
+                                    }
+                                }
+                                Text(shower.date)
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                            }
+                        }
+                    }
+                    .foregroundColor(.white)
+                    .padding(.leading, 20)
+                    .padding(.bottom, 20)
+                }
+            }
+        }
+        .shadow(radius: 3)
+        .foregroundColor(tertiaryGray)
+        .padding(10)
+    }
+}
+
+struct WeeklyUsageTimeView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            WeeklyUsageTimeView(consumption: .constant(.energetic), homeAppliance: .shower)
+                .preferredColorScheme(.dark)
+        }
     }
 }
